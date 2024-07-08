@@ -1,0 +1,11 @@
+<view class="container">
+  <qrcode isDraw="{{isDraw}}"></qrcode>
+  
+  <scroll-view scroll-y class="text-input">
+      <van-field value="{{ inputValue }}" label="输入内容" type="textarea" placeholder="请输入留言" autosize 
+      border="{{ false }}" />
+  </scroll-view>
+  <view>
+    <button bindtap="draw">Draw</button>
+  </view>
+</view>
