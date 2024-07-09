@@ -7,3 +7,21 @@ Page{
 .text-input{
     height: 10vh;
 }
+
+.container{
+  width: 600rpx;
+  margin: 0 auto;
+}
+
+.confirm-button{
+  height: 10vh;
+}
+
+.slider-container{
+  height: 40vh;
+}
+
+.slider-item{
+  height: 10vh;
+  position: relative;
+}

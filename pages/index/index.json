@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "qrcode":"../../components/qrcode/qrcode",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-slider": "@vant/weapp/slider/index"
   },
   "navigationBarBackgroundColor": "#ccc",
   "navigationBarTitleText": "二维码生成器"
