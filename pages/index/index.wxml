@@ -1,19 +1,21 @@
 <view class="container">
-  <view>
-    <qrcode isDraw="{{isDraw}}"></qrcode>
+  <view class="qrcode-container">
+    <qrcode isDraw="{{isDraw}}" class="qrcode-component"></qrcode>
   </view>
+  
   <scroll-view scroll-y class="text-input">
-    <van-field value="{{ inputValue }}" use-button-slot type="textarea" placeholder="请输入网址或文本" autosize border="{{ false }}" />
+    <van-field value="{{ inputValue }}" input-class="field-class" type="textarea" placeholder="请输入网址或文本" autosize border="{{ false }}" />
   </scroll-view>
-  <view class="confirm-button">
-    <button bindtap="draw">Draw</button>
-  </view>
+
   <view class="slider-container">
-    <view class="slider-item" wx:for="{{sliderValue}}"wx:key="{{item.id}}">
+    <view class="slider-item" wx:for="{{sliderValue}}" wx:key="{{item.id}}">
       <view class="slider-title">{{sliderTitle[index]}}</view>
       <van-slider value="{{ item.value }}"  min="{{item.minValue}}" max="{{item.maxValue}}"  bar-height=".8vh" use-button-slot bind:drag="onDrag" data-index="{{item.id}}">
       <view class="custom-button" slot="button">{{ item.value }}</view>
     </van-slider>
     </view>
+  </view>
+    <view class="confirm-button">
+    <button bindtap="drawQRCode">Draw</button>
   </view>
 </view>

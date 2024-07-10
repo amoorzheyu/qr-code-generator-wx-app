@@ -5,7 +5,7 @@ Page{
 
 /* 输入文本区域滑动区域 */
 .text-input{
-    height: 10vh;
+    height: 20vh;
 }
 
 .container{
@@ -18,10 +18,26 @@ Page{
 }
 
 .slider-container{
-  height: 40vh;
+  height: 30vh;
 }
 
 .slider-item{
   height: 10vh;
   position: relative;
+}
+.qrcode-container{
+  height: 40vh;
+}
+
+.field-class{
+  height: 20vh !important;
+}
+.qrcode-container{
+  /* width: 400rpx; */
+  /* margin: 0 auto; */
+}
+
+.qrcode-component{
+  width: 400rpx !important;
+  height: 40vh !important;
 }

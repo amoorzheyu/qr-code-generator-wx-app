@@ -1,0 +1,9 @@
+.qrcode-components{
+  width: 100%;
+  height: 100%;
+}
+
+/* .canvas-class{
+  width: 200rpx;
+  height: 200rpx;
+} */

@@ -12,19 +12,19 @@ Page({
     ],
     sliderValue:[
       {
-        id:0,
+        id:"0",
         value:150,
         minValue:100,
         maxValue:200
       },
       {
-        id:1,
+        id:"1",
         value:30,
         minValue:10,
         maxValue:50
       },
       {
-        id:2,
+        id:"2",
         value:20,
         minValue:10,
         maxValue:30
