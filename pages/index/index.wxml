@@ -1,6 +1,6 @@
 <view class="container">
   <view class="qrcode-container">
-    <qrcode isDraw="{{isDraw}}" imageUrl="{{imageUrl}}" sliderValue="{{sliderValue}}" inputValue="{{inputValue}}" class="qrcode-component"></qrcode>
+    <qrcode isDraw="{{isDraw}}" imageUrl="{{imageUrl}}" sliderValue="{{sliderValue}}" inputValue="{{inputValue}}" downloadSigner="{{downloadSigner}}" class="qrcode-component"></qrcode>
   </view>
   <view class="upload-container">
     <van-uploader class="upload-button" bind:after-read="getImage">

@@ -29,16 +29,26 @@ Page({
         minValue:10,
         maxValue:30
       }
-    ]
+    ],
+    downloadSigner:0,
   },
   /**
    * 本用于绘制二维码，但似乎用不上了，准备改成保存到本地
    * TODO:待添加
    */
   drawQRCode(){
-    
+    this.save()
   },
-  
+
+  /**
+   * 保存图片到本地
+   */
+  save(){
+    let downloadSigner=this.data.downloadSigner
+    this.setData({
+      downloadSigner:downloadSigner+1
+    })
+  },
   onDrag(event) {
     //获取当前拖拽条的index
     let {index}=event.currentTarget.dataset
@@ -86,6 +96,4 @@ Page({
       imageUrl:tempFilePath
     })
   }
-
-
 })

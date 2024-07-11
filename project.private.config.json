@@ -3,5 +3,6 @@
   "projectname": "qr-code-generator-wx-app",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "3.0.2"
 }
