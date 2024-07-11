@@ -4,7 +4,7 @@ Page({
   data: {
     isDraw:false,
     inputValue:'',
-    currentValue: 50,
+    imageUrl:'/assert/images/icon.jpg',
     sliderTitle:[
       '二维码尺寸',
       '图片大小',
@@ -13,15 +13,15 @@ Page({
     sliderValue:[
       {
         id:"0",
-        value:150,
-        minValue:100,
-        maxValue:200
+        value:300,
+        minValue:200,
+        maxValue:400
       },
       {
         id:"1",
-        value:30,
-        minValue:10,
-        maxValue:50
+        value:100,
+        minValue:50,
+        maxValue:150
       },
       {
         id:"2",
@@ -31,10 +31,12 @@ Page({
       }
     ]
   },
+  /**
+   * 本用于绘制二维码，但似乎用不上了，准备改成保存到本地
+   * TODO:待添加
+   */
   drawQRCode(){
-    this.setData({
-      isDraw:true
-    })
+    
   },
   
   onDrag(event) {
@@ -48,6 +50,42 @@ Page({
     this.setData({
       [updatePath]:event.detail.value
     });
+  },
+
+  /**
+   * 拖拽条数值改变
+   */
+  silderChange(e){
+    const value = e.detail;
+    let {index}=e.currentTarget.dataset
+
+     //构造更新路径
+     let updatePath = `sliderValue[${index}].value`;
+
+     //更新数据实现滑动数据变化
+     this.setData({
+       [updatePath]:value
+     });
+  },
+
+  /**
+   * 输入框内容改变
+   */
+  textChange(e){
+    const value=e.detail
+    this.setData({
+      inputValue:value
+    })
+  },
+  /**
+   * 获取上传的图片
+   */
+  getImage(e){
+    const {tempFilePath}=e.detail.file;
+    this.setData({
+      imageUrl:tempFilePath
+    })
   }
+
 
 })

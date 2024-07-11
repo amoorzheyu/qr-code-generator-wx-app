@@ -1,21 +1,25 @@
 <view class="container">
   <view class="qrcode-container">
-    <qrcode isDraw="{{isDraw}}" class="qrcode-component"></qrcode>
+    <qrcode isDraw="{{isDraw}}" imageUrl="{{imageUrl}}" sliderValue="{{sliderValue}}" inputValue="{{inputValue}}" class="qrcode-component"></qrcode>
   </view>
-  
+  <view class="upload-container">
+    <van-uploader class="upload-button" bind:after-read="getImage">
+      <van-button icon="photo" type="primary">上传图片</van-button>
+    </van-uploader>
+  </view>
   <scroll-view scroll-y class="text-input">
-    <van-field value="{{ inputValue }}" input-class="field-class" type="textarea" placeholder="请输入网址或文本" autosize border="{{ false }}" />
+    <van-field value="{{ inputValue }}" bind:change="textChange" input-class="field-class" type="textarea" placeholder="请输入网址或文本" autosize border="{{ false }}" />
   </scroll-view>
-
   <view class="slider-container">
     <view class="slider-item" wx:for="{{sliderValue}}" wx:key="{{item.id}}">
       <view class="slider-title">{{sliderTitle[index]}}</view>
-      <van-slider value="{{ item.value }}"  min="{{item.minValue}}" max="{{item.maxValue}}"  bar-height=".8vh" use-button-slot bind:drag="onDrag" data-index="{{item.id}}">
-      <view class="custom-button" slot="button">{{ item.value }}</view>
-    </van-slider>
+      <van-slider value="{{ item.value }}" min="{{item.minValue}}" max="{{item.maxValue}}" bar-height=".8vh" use-button-slot bind:drag="onDrag" bind:change="silderChange" data-index="{{item.id}}">
+        <view class="custom-button" slot="button">{{ item.value }}</view>
+      </van-slider>
     </view>
   </view>
-    <view class="confirm-button">
-    <button bindtap="drawQRCode">Draw</button>
+  <view class="confirm-button">
+    <!-- 本用于绘制二维码，但似乎用不上了，准备改成保存到本地 -->
+    <button bindtap="drawQRCode">下载二维码</button>
   </view>
 </view>

@@ -6,6 +6,7 @@ Page{
 /* 输入文本区域滑动区域 */
 .text-input{
     height: 20vh;
+    border: 1rpx solid #ccc !important;
 }
 
 .container{
@@ -25,19 +26,50 @@ Page{
   height: 10vh;
   position: relative;
 }
+.slider-item:nth-child(1){
+  padding-top: 2vh;
+}
 .qrcode-container{
-  height: 40vh;
+  box-sizing: border-box;
+  height: 30vh;
 }
 
 .field-class{
   height: 20vh !important;
 }
-.qrcode-container{
-  /* width: 400rpx; */
-  /* margin: 0 auto; */
-}
+
 
 .qrcode-component{
   width: 400rpx !important;
-  height: 40vh !important;
+  height: 30vh !important;
+}
+
+.upload-button,.upload-container{
+  height: 10vh !important;
+  position: relative;
+}
+
+.upload-button{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.slider-title{
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #585555;
+  margin-bottom: 0.6vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-button{
+  font-size: 25rpx;
+  padding: 0.1vh 10rpx;
+  background-color: #3496fa;
+  border-radius: 20%;
+  color: aliceblue;
+  width: 50rpx;
+  text-align: center;
 }

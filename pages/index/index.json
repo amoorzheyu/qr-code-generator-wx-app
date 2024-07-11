@@ -3,7 +3,8 @@
     "qrcode":"../../components/qrcode/qrcode",
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index",
-    "van-slider": "@vant/weapp/slider/index"
+    "van-slider": "@vant/weapp/slider/index",
+    "van-uploader": "@vant/weapp/uploader/index"
   },
   "navigationBarBackgroundColor": "#ccc",
   "navigationBarTitleText": "二维码生成器"

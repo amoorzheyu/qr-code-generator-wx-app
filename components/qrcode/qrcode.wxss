@@ -3,7 +3,9 @@
   height: 100%;
 }
 
-/* .canvas-class{
-  width: 200rpx;
-  height: 200rpx;
-} */
+.canvas-class{
+ position: relative;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%,-50%);
+}
